@@ -1,13 +1,19 @@
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
+import Shop from './pages/Shop';
 import NotFound from './pages/NotFound';
+import NavBar from './components/NavBar';
 
 export function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="*" element={<NotFound />} />
-    </Routes>
+    <>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/shop/:category" element={<Shop />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </>
   );
 }
 

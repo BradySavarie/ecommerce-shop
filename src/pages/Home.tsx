@@ -1,8 +1,13 @@
+import { Link } from 'react-router-dom';
+
 function Home() {
   return (
-    <div>
-      <h1>Hello World</h1>
-    </div>
+    <>
+      <h1>Home Page</h1>
+      <Link to="/shop/all">
+        <button>Shop Now</button>
+      </Link>
+    </>
   );
 }
 
