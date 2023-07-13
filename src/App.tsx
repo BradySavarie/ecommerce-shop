@@ -10,7 +10,7 @@ export function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/shop/:category" element={<Shop />} />
+        <Route path="/Shop/:category" element={<Shop />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>
