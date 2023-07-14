@@ -1,30 +1,40 @@
-// Remember to install uniquid to generate id's
+import uniqid from 'uniqid';
 
 export type Product = {
-  id: number;
+  id: string;
   name: string;
   manufacturer: string;
   category: string;
 };
 
 const ProductData: Product[] = [
-  { id: 1, name: 'EP Booster', manufacturer: 'Xotic', category: 'Boost' },
   {
-    id: 2,
+    id: uniqid(),
+    name: 'EP Booster',
+    manufacturer: 'Xotic',
+    category: 'Boost',
+  },
+  {
+    id: uniqid(),
     name: 'BD-2 Blues Driver',
     manufacturer: 'Boss',
     category: 'Overdrive',
   },
-  { id: 3, name: 'RAT 2', manufacturer: 'ProCo', category: 'Distortion' },
   {
-    id: 4,
+    id: uniqid(),
+    name: 'RAT 2',
+    manufacturer: 'ProCo',
+    category: 'Distortion',
+  },
+  {
+    id: uniqid(),
     name: 'Big Muff',
     manufacturer: 'Electro-Harmonix',
     category: 'Fuzz',
   },
-  { id: 5, name: 'DD3', manufacturer: 'Boss', category: 'Delay' },
+  { id: uniqid(), name: 'DD3', manufacturer: 'Boss', category: 'Delay' },
   {
-    id: 6,
+    id: uniqid(),
     name: 'Afterneath',
     manufacturer: 'Earthquaker Devices',
     category: 'Reverb',

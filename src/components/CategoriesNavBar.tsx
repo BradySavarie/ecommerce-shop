@@ -1,5 +1,6 @@
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
+import uniqid from 'uniqid';
 
 const CategoriesNavBar = () => {
   const { category } = useParams();
@@ -19,7 +20,7 @@ const CategoriesNavBar = () => {
 
       <ul>
         {categories.map((category) => (
-          <li>
+          <li key={uniqid()}>
             <Link to={`/Shop/${category}`}>{category}</Link>
           </li>
         ))}
