@@ -10,7 +10,8 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   const { category } = useParams();
   return (
     <Link to={`/Shop/${category}/${product.id}`}>
-      <p>{product.name}</p>
+      <img src={product.image} height={100} />
+      <p>{product.model}</p>
       <p>{product.manufacturer}</p>
     </Link>
   );
