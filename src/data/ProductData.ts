@@ -16,6 +16,12 @@ const ProductData: Product[] = [
   },
   {
     id: uniqid(),
+    name: 'Katana Mini',
+    manufacturer: 'Keeley',
+    category: 'Boost',
+  },
+  {
+    id: uniqid(),
     name: 'BD-2 Blues Driver',
     manufacturer: 'Boss',
     category: 'Overdrive',
