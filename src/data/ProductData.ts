@@ -1,4 +1,6 @@
-type Product = {
+// Remember to install uniquid to generate id's
+
+export type Product = {
   id: number;
   name: string;
   manufacturer: string;

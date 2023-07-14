@@ -1,7 +1,7 @@
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 
-const Categories = () => {
+const CategoriesNavBar = () => {
   const { category } = useParams();
   const categories = [
     'All',
@@ -28,4 +28,4 @@ const Categories = () => {
   );
 };
 
-export default Categories;
+export default CategoriesNavBar;

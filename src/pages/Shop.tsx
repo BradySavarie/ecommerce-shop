@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom';
-import Categories from '../components/Categories';
 import ProductData from '../data/ProductData';
+import CategoriesNavBar from '../components/CategoriesNavBar';
+import ProductCard from '../components/ProductCard';
 
 function Shop() {
   const { category } = useParams();
@@ -13,12 +14,16 @@ function Shop() {
   return (
     <>
       <h1>Shop Page</h1>
-      <Categories />
-      <div>
+      <CategoriesNavBar />
+      <ul>
         {products.map((product) => {
-          return <li key={product.id}>{product.name}</li>;
+          return (
+            <div key={product.id}>
+              <ProductCard product={product} />
+            </div>
+          );
         })}
-      </div>
+      </ul>
     </>
   );
 }

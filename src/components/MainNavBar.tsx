@@ -1,6 +1,6 @@
 import { Link, NavLink } from 'react-router-dom';
 
-const NavBar = () => {
+const MainNavBar = () => {
   return (
     <div>
       <Link to="/">Effects Pedals</Link>
@@ -9,4 +9,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default MainNavBar;
