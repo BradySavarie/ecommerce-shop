@@ -4,10 +4,11 @@ import Home from './pages/Home';
 import Shop from './pages/Shop';
 import Product from './pages/Product';
 import NotFound from './pages/NotFound';
+import StyledApp from './components/styles/App.styled';
 
 export function App() {
   return (
-    <>
+    <StyledApp>
       <MainNavBar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -15,7 +16,7 @@ export function App() {
         <Route path="/Shop/:category/:productId" element={<Product />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-    </>
+    </StyledApp>
   );
 }
 
