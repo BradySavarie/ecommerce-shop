@@ -3,13 +3,14 @@ import styled from 'styled-components';
 const StyledMainNavBar = styled.div`
   position: relative;
   display: flex;
-  padding: 15px 5vw;
+  padding: ${({ theme }) => {
+    const { spacing } = theme;
+    return `${spacing(2)} ${spacing(8)}`;
+  }};
   justify-content: space-between;
   align-items: center;
   background-color: white;
-  box-shadow:
-    0 4px 6px -1px rgb(0 0 0 / 0.1),
-    0 2px 4px -2px rgb(0 0 0 / 0.1);
+  box-shadow: ${({ theme }) => theme.shadows[3]};
 
   .logo,
   .shopLink {
