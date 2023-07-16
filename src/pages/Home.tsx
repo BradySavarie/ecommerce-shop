@@ -1,12 +1,15 @@
 import { Link } from 'react-router-dom';
+import StyledHome from './styles/Home.styled';
 
 function Home() {
   return (
     <>
-      <h1>Home Page</h1>
-      <Link to="/Shop/All">
-        <button>Shop Now</button>
-      </Link>
+      <StyledHome>
+        <h1>Home Page</h1>
+        <Link to="/Shop/All">
+          <button>Shop Now</button>
+        </Link>
+      </StyledHome>
     </>
   );
 }

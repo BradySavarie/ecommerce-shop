@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { WrappedApp } from './App.tsx';
-import { DataContextProvider } from './components/DataContextProvider.tsx';
+import { DataContextProvider } from './context/DataContextProvider.tsx';
 import CssBaseline from '@mui/material/CssBaseline';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(

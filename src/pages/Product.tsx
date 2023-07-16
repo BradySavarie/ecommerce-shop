@@ -1,4 +1,4 @@
-import { DataContext } from '../components/DataContextProvider';
+import { DataContext } from '../context/DataContextProvider';
 import { useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import uniqid from 'uniqid';

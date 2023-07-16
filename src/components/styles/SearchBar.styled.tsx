@@ -43,6 +43,8 @@ const StyledSearchBar = styled.div`
   }
 
   .dataResult {
+    position: absolute;
+    z-index: 999;
     margin-top: 5px;
     max-height: 200px;
     width: 200px;

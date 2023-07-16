@@ -1,5 +1,5 @@
 import { useContext, useState, ChangeEvent } from 'react';
-import { DataContext } from './DataContextProvider';
+import { DataContext } from '../context/DataContextProvider';
 import StyledSearchBar from './styles/SearchBar.styled';
 import Search from '@mui/icons-material/Search';
 import CloseIcon from '@mui/icons-material/Close';
