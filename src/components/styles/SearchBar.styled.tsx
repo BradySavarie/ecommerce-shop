@@ -11,7 +11,7 @@ const StyledSearchBar = styled.div`
     border-radius: 2px;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
-    outline: 1px solid grey;
+    outline: 1px solid ${({ theme }) => theme.palette.grey[500]};
     font-size: 15px;
     padding: 15px;
     height: 30px;
@@ -22,8 +22,8 @@ const StyledSearchBar = styled.div`
   .searchIcon {
     height: 30px;
     width: 30px;
-    background-color: grey;
-    outline: 1px solid grey;
+    background-color: ${({ theme }) => theme.palette.primary.main};
+    outline: 1px solid ${({ theme }) => theme.palette.grey[500]};
     display: grid;
     place-items: center;
     box-shadow:
@@ -32,7 +32,7 @@ const StyledSearchBar = styled.div`
   }
 
   .searchInput:focus {
-    outline: none;
+    outline: 1px solid ${({ theme }) => theme.palette.grey[900]};
   }
 
   .searchIcon svg {

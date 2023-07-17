@@ -1,12 +1,12 @@
 import { Link, NavLink } from 'react-router-dom';
-import StyledMainNavBar from './styles/MainNavBar.styled';
+import StyledNavBar from './styles/NavBar.styled';
 import SearchBar from './SearchBar';
 import { Typography } from '@mui/material';
 import ShoppingCartButton from './ShoppingCartButton';
 
-const MainNavBar = () => {
+const NavBar = () => {
   return (
-    <StyledMainNavBar>
+    <StyledNavBar>
       <Link to="/" className="logo">
         <Typography variant="h1" fontFamily="Lobster">
           Audio Effects
@@ -19,8 +19,8 @@ const MainNavBar = () => {
         </Typography>
       </NavLink>
       <ShoppingCartButton />
-    </StyledMainNavBar>
+    </StyledNavBar>
   );
 };
 
-export default MainNavBar;
+export default NavBar;

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledMainNavBar = styled.div`
+const StyledNavBar = styled.div`
   position: relative;
   display: flex;
   padding: ${({ theme }) => {
@@ -9,7 +9,7 @@ const StyledMainNavBar = styled.div`
   }};
   justify-content: space-between;
   align-items: center;
-  background-color: white;
+  background-color: ${({ theme }) => theme.palette.grey[50]};
   box-shadow: ${({ theme }) => theme.shadows[3]};
 
   .logo,
@@ -19,4 +19,4 @@ const StyledMainNavBar = styled.div`
   }
 `;
 
-export default StyledMainNavBar;
+export default StyledNavBar;

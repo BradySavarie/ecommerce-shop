@@ -1,6 +1,6 @@
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import { createTheme, ThemeProvider } from '@mui/material';
-import MainNavBar from './components/MainNavBar';
+import NavBar from './components/NavBar';
 import Home from './pages/Home';
 import Shop from './pages/Shop';
 import Product from './pages/Product';
@@ -12,13 +12,21 @@ const theme = createTheme({
     fontFamily: ['Lobster', 'Source Sans 3', 'sans-serif'].join(','),
     h1: { fontSize: '2.5rem' },
   },
+  palette: {
+    primary: {
+      main: '#eca72c',
+    },
+    secondary: {
+      main: '#537596',
+    },
+  },
 });
 
 export function App() {
   return (
     <ThemeProvider theme={theme}>
       <StyledApp>
-        <MainNavBar />
+        <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Shop/:category" element={<Shop />} />
