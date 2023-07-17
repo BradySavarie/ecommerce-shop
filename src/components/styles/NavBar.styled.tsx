@@ -15,7 +15,11 @@ const StyledNavBar = styled.div`
   .logo,
   .shopLink {
     text-decoration: none;
-    color: black;
+    color: ${({ theme }) => theme.palette.grey[900]};
+  }
+
+  .logo:hover {
+    color: ${({ theme }) => theme.palette.grey[800]};
   }
 `;
 

@@ -10,11 +10,10 @@ import StyledApp from './components/styles/App.styled';
 const theme = createTheme({
   typography: {
     fontFamily: ['Lobster', 'Source Sans 3', 'sans-serif'].join(','),
-    h1: { fontSize: '2.5rem' },
   },
   palette: {
     primary: {
-      main: '#eca72c',
+      main: '#cc7f00',
     },
     secondary: {
       main: '#537596',

@@ -8,7 +8,7 @@ const NavBar = () => {
   return (
     <StyledNavBar>
       <Link to="/" className="logo">
-        <Typography variant="h1" fontFamily="Lobster">
+        <Typography variant="h4" fontFamily="Lobster">
           Audio Effects
         </Typography>
       </Link>
