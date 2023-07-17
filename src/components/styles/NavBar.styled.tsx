@@ -10,7 +10,6 @@ const StyledNavBar = styled.div`
   justify-content: space-between;
   align-items: center;
   background-color: ${({ theme }) => theme.palette.grey[50]};
-  box-shadow: ${({ theme }) => theme.shadows[3]};
 
   .logo,
   .shopLink {
