@@ -17,6 +17,7 @@ const StyledSearchBar = styled.div`
     height: 30px;
     width: 45vw;
     box-shadow: ${({ theme }) => theme.shadows[1]};
+    margin-left: ${({ theme }) => theme.spacing(2)};
   }
 
   .searchIcon {
@@ -29,6 +30,7 @@ const StyledSearchBar = styled.div`
     box-shadow:
       0 4px 6px -1px rgb(0 0 0 / 0.1),
       0 2px 4px -2px rgb(0 0 0 / 0.1);
+    margin-right: ${({ theme }) => theme.spacing(2)};
   }
 
   .searchInput:focus {
@@ -52,6 +54,7 @@ const StyledSearchBar = styled.div`
       0 2px 4px -2px rgb(0 0 0 / 0.1);
     overflow: hidden;
     overflow-y: auto;
+    margin-left: ${({ theme }) => theme.spacing(2)};
   }
 
   .dataResult::-webkit-scrollbar {

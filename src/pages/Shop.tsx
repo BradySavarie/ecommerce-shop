@@ -13,7 +13,6 @@ function Shop() {
 
   return (
     <>
-      <h1>Shop Page</h1>
       <p>Shop/{category}</p>
       <ul>
         {products.map((product) => {
