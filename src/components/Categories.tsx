@@ -1,5 +1,4 @@
 import { Divider, Container, Box } from '@mui/material';
-import uniqid from 'uniqid';
 import {
   StyledCategories,
   LinkContainer,
@@ -24,7 +23,7 @@ const Categories = () => {
           <Divider />
           <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
             {categories.map((category) => (
-              <LinkContainer key={uniqid()}>
+              <LinkContainer key={category}>
                 <StyledLink to={`/Shop/${category}`}>{category}</StyledLink>
               </LinkContainer>
             ))}

@@ -15,7 +15,11 @@ export const LinkContainer = styled('div')`
 
 export const StyledLink = styled(NavLink)`
   text-decoration: none;
-  color: ${({ theme }) => theme.palette.grey[900]};
+  color: ${({ theme }) => theme.palette.grey[800]};
+
+  &:hover {
+    color: ${({ theme }) => theme.palette.grey[900]};
+  }
 
   &.active {
     color: ${({ theme }) => theme.palette.primary.main};
