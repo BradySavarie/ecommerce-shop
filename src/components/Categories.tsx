@@ -24,7 +24,7 @@ const Categories = () => {
           <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
             {categories.map((category) => (
               <LinkContainer key={category}>
-                <StyledLink to={`/Shop/${category}`}>{category}</StyledLink>
+                <StyledLink to={`/catalog/${category}`}>{category}</StyledLink>
               </LinkContainer>
             ))}
           </Box>

@@ -54,7 +54,7 @@ const SearchBar = () => {
             return (
               <Link
                 className="product"
-                to={`/Shop/${product.category}/${product.id}`}
+                to={`/catalog/${product.category}/${product.id}`}
                 onClick={clearInput}
               >
                 {product.model}

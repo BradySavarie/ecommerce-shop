@@ -28,8 +28,8 @@ export function App() {
         <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/Shop/:category" element={<Shop />} />
-          <Route path="/Shop/:category/:productId" element={<Product />} />
+          <Route path="/catalog/:category" element={<Shop />} />
+          <Route path="/catalog/:category/:productId" element={<Product />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </StyledApp>

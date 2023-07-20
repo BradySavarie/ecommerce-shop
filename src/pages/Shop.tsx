@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 import ProductData from '../data/ProductData';
-import CategoriesNavBar from '../components/Categories';
 import ProductCard from '../components/ProductCard';
+import { Grid } from '@mui/material';
 
 function Shop() {
   const { category } = useParams();
@@ -14,15 +14,15 @@ function Shop() {
   return (
     <>
       <p>Shop/{category}</p>
-      <ul>
+      <Grid container spacing={2}>
         {products.map((product) => {
           return (
-            <div key={product.id}>
+            <Grid item key={product.id}>
               <ProductCard product={product} />
-            </div>
+            </Grid>
           );
         })}
-      </ul>
+      </Grid>
     </>
   );
 }

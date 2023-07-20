@@ -26,7 +26,7 @@ function Home() {
             Unleash your creativity and elevate your sound with our collection
             of audio effects equipment
           </Typography>
-          <Link to="/Shop/All">
+          <Link to="/catalog/All">
             <Button variant="contained">View Catalog</Button>
           </Link>
         </Container>
