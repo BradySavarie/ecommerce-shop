@@ -1,7 +1,8 @@
 import { useParams } from 'react-router-dom';
 import ProductData from '../data/ProductData';
 import ProductCard from '../components/ProductCard';
-import { Grid } from '@mui/material';
+import { Grid, Typography, Container } from '@mui/material';
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 
 function Shop() {
   const { category } = useParams();
@@ -13,7 +14,13 @@ function Shop() {
 
   return (
     <>
-      <p>Shop/{category}</p>
+      <Container sx={{ marginY: 2 }}>
+        <Typography sx={{ display: 'flex', alignItems: 'center' }}>
+          Catalog
+          <KeyboardArrowRightIcon />
+          {category}
+        </Typography>
+      </Container>
       <Grid container spacing={2}>
         {products.map((product) => {
           return (

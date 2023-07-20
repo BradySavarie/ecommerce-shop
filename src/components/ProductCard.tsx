@@ -23,6 +23,7 @@ type ProductCardProps = {
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   const { category } = useParams();
+
   return (
     <StyledProductCard>
       <CardActionArea>
