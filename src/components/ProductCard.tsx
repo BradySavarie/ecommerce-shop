@@ -16,6 +16,7 @@ import {
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import { useShoppingCart } from '../context/ShoppingCartContextProvider';
 
 type ProductCardProps = {
   product: Product;
@@ -23,6 +24,9 @@ type ProductCardProps = {
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   const { category } = useParams();
+  const { getProductQuantity, incrementCartQuantity, decrementCartQuantity } =
+    useShoppingCart();
+  const quantity = getProductQuantity(product.id);
 
   return (
     <StyledProductCard>
@@ -54,13 +58,21 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             justifyContent: 'space-evenly',
           }}
         >
-          <Button color="primary" variant="text">
+          <Button
+            color="primary"
+            variant="text"
+            onClick={() => incrementCartQuantity(product.id)}
+          >
             <KeyboardArrowUpIcon />
           </Button>
           <Typography variant="body1" fontWeight="700">
-            1
+            {quantity}
           </Typography>
-          <Button color="primary" variant="text">
+          <Button
+            color="primary"
+            variant="text"
+            onClick={() => decrementCartQuantity(product.id)}
+          >
             <KeyboardArrowDownIcon />
           </Button>
         </Container>

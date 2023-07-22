@@ -33,7 +33,7 @@ export function ShoppingCartContextProvider({
 
   function incrementCartQuantity(id: string) {
     return setCartProducts((currProducts) => {
-      if (currProducts.find((product) => product.id === id) === null) {
+      if (currProducts.find((product) => product.id === id) == null) {
         return [...currProducts, { id, quantity: 1 }];
       } else {
         return currProducts.map((product) => {

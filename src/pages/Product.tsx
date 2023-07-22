@@ -15,18 +15,23 @@ import {
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import { useShoppingCart } from '../context/ShoppingCartContextProvider';
 
 const Product = () => {
   const { products } = useContext(DataContext);
+  const { getProductQuantity, incrementCartQuantity, decrementCartQuantity } =
+    useShoppingCart();
   const { category, productId } = useParams();
 
   // Search & Filter Product Data
   const product = products.find((product) => product.id === productId);
+
   const similarProducts = products.filter(
     (product) => product.category === category && product.id !== productId
   );
 
   if (product) {
+    const quantity = getProductQuantity(product.id);
     return (
       <>
         <Container sx={{ marginY: 2 }}>
@@ -73,13 +78,21 @@ const Product = () => {
                 <ShoppingCartIcon />
               </Button>
               <Container className="quantity">
-                <Button color="primary" variant="text">
+                <Button
+                  color="primary"
+                  variant="text"
+                  onClick={() => incrementCartQuantity(product.id)}
+                >
                   <KeyboardArrowUpIcon />
                 </Button>
                 <Typography variant="body1" fontWeight="700">
-                  {product.quantity}
+                  {quantity}
                 </Typography>
-                <Button color="primary" variant="text">
+                <Button
+                  color="primary"
+                  variant="text"
+                  onClick={() => decrementCartQuantity(product.id)}
+                >
                   <KeyboardArrowDownIcon />
                 </Button>
               </Container>
