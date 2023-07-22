@@ -1,9 +1,20 @@
 import { DataContext } from '../context/DataContextProvider';
 import { useContext } from 'react';
-import { useParams } from 'react-router-dom';
-import uniqid from 'uniqid';
-
+import { Navigate, useParams } from 'react-router-dom';
+import { Container, Typography } from '@mui/material';
 import ProductCard from '../components/ProductCard';
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import { StyledProductPage } from '../components/styles/ProductPage.styled';
+import {
+  Card,
+  CardActionArea,
+  CardContent,
+  CardActions,
+  Button,
+} from '@mui/material';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 const Product = () => {
   const { products } = useContext(DataContext);
@@ -15,18 +26,78 @@ const Product = () => {
     (product) => product.category === category && product.id !== productId
   );
 
-  return (
-    <>
-      <h1>Product Page</h1>
-      {product && <ProductCard product={product} />}
-      <h1>Similar Products</h1>
-      <div key={uniqid()}>
-        {similarProducts.map((product) => (
-          <ProductCard product={product} />
-        ))}
-      </div>
-    </>
-  );
+  if (product) {
+    return (
+      <>
+        <Container sx={{ marginY: 2 }}>
+          <Typography sx={{ display: 'flex', alignItems: 'center' }}>
+            Catalog
+            <KeyboardArrowRightIcon />
+            {product.category}
+            <KeyboardArrowRightIcon />
+            {product.model}
+          </Typography>
+        </Container>
+
+        <StyledProductPage>
+          <img src={product.image} height="350px" />
+
+          <Container className="information">
+            <Container className="header">
+              <Container
+                disableGutters
+                sx={{
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  gap: '5',
+                }}
+              >
+                <Typography variant="h4" component="div">
+                  {product.model}
+                </Typography>
+                <Typography variant="h5" fontWeight={700} color="primary.main">
+                  ${product.price}
+                </Typography>
+              </Container>
+              <Typography variant="body1" color="text.secondary">
+                {product.manufacturer}
+              </Typography>
+            </Container>
+
+            <Container className="description">
+              <Typography variant="body2">{product.description}</Typography>
+            </Container>
+
+            <Container className="controls">
+              <Button size="small" color="primary" variant="outlined">
+                <ShoppingCartIcon />
+              </Button>
+              <Container className="quantity">
+                <Button color="primary" variant="text">
+                  <KeyboardArrowUpIcon />
+                </Button>
+                <Typography variant="body1" fontWeight="700">
+                  {product.quantity}
+                </Typography>
+                <Button color="primary" variant="text">
+                  <KeyboardArrowDownIcon />
+                </Button>
+              </Container>
+            </Container>
+          </Container>
+        </StyledProductPage>
+
+        <h1>Similar Products</h1>
+        <div key={product.id}>
+          {similarProducts.map((product) => (
+            <ProductCard product={product} />
+          ))}
+        </div>
+      </>
+    );
+  } else {
+    return <Navigate to="/" />;
+  }
 };
 
 export default Product;

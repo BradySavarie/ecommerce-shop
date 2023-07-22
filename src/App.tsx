@@ -39,7 +39,7 @@ export function App() {
 
 export function WrappedApp() {
   return (
-    <HashRouter>
+    <HashRouter basename="/">
       <App />
     </HashRouter>
   );
