@@ -6,6 +6,7 @@ import Shop from './pages/Shop';
 import Product from './pages/Product';
 import NotFound from './pages/NotFound';
 import StyledApp from './components/styles/App.styled';
+import { ShoppingCartContextProvider } from './context/ShoppingCartContextProvider';
 
 const theme = createTheme({
   typography: {
@@ -23,17 +24,19 @@ const theme = createTheme({
 
 export function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <StyledApp>
-        <NavBar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/catalog/:category" element={<Shop />} />
-          <Route path="/catalog/:category/:productId" element={<Product />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </StyledApp>
-    </ThemeProvider>
+    <ShoppingCartContextProvider>
+      <ThemeProvider theme={theme}>
+        <StyledApp>
+          <NavBar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/catalog/:category" element={<Shop />} />
+            <Route path="/catalog/:category/:productId" element={<Product />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </StyledApp>
+      </ThemeProvider>
+    </ShoppingCartContextProvider>
   );
 }
 
