@@ -29,6 +29,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
     incrementCartQuantity,
     decrementCartQuantity,
     openCart,
+    cartQuantity,
   } = useShoppingCart();
   const quantity = getProductQuantity(product.id);
 
@@ -56,7 +57,11 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           size="small"
           color="primary"
           variant="outlined"
-          onClick={openCart}
+          onClick={() => {
+            if (cartQuantity > 0) {
+              openCart();
+            }
+          }}
         >
           <ShoppingCartIcon />
         </Button>

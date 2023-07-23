@@ -1,5 +1,6 @@
-import { Drawer } from '@mui/material';
+import { Drawer, Stack, Typography, Container } from '@mui/material';
 import { createContext, useContext, ReactNode, useState } from 'react';
+import { CartProduct } from '../components/CartProduct';
 
 type ShoppingCartContextProviderProps = {
   children: ReactNode;
@@ -94,7 +95,26 @@ export function ShoppingCartContextProvider({
     >
       {children}
       <Drawer anchor="right" open={isOpen} onClose={closeCart}>
-        <div>OffCanvas Content</div>
+        <Container
+          sx={{
+            minWidth: '35vw',
+            padding: (theme) => theme.spacing(2),
+          }}
+        >
+          <Typography
+            variant="h3"
+            fontWeight="500"
+            fontFamily="Lobster"
+            sx={{ mb: '30px' }}
+          >
+            Cart
+          </Typography>
+          <Stack spacing={2}>
+            {cartProducts.map((product) => (
+              <CartProduct key={product.id} {...product} />
+            ))}
+          </Stack>
+        </Container>
       </Drawer>
     </ShoppingCartContext.Provider>
   );

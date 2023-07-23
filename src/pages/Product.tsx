@@ -5,13 +5,7 @@ import { Container, Typography } from '@mui/material';
 import ProductCard from '../components/ProductCard';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import { StyledProductPage } from '../components/styles/ProductPage.styled';
-import {
-  Card,
-  CardActionArea,
-  CardContent,
-  CardActions,
-  Button,
-} from '@mui/material';
+import { Button } from '@mui/material';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';

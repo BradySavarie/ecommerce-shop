@@ -24,8 +24,8 @@ const theme = createTheme({
 
 export function App() {
   return (
-    <ShoppingCartContextProvider>
-      <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme}>
+      <ShoppingCartContextProvider>
         <StyledApp>
           <NavBar />
           <Routes>
@@ -35,8 +35,8 @@ export function App() {
             <Route path="*" element={<NotFound />} />
           </Routes>
         </StyledApp>
-      </ThemeProvider>
-    </ShoppingCartContextProvider>
+      </ShoppingCartContextProvider>
+    </ThemeProvider>
   );
 }
 

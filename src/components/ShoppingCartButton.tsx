@@ -10,7 +10,7 @@ const ShoppingCartButton = () => {
     <>
       <StyledShoppingCartButton onClick={openCart}>
         <div className="cartIcon">
-          <Badge badgeContent={cartQuantity}>
+          <Badge badgeContent={cartQuantity} color="primary">
             <ShoppingCartIcon />
           </Badge>
         </div>
