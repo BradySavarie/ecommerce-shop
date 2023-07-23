@@ -10,13 +10,7 @@ type CartProductProps = {
 };
 
 export const CartProduct = ({ id, quantity }: CartProductProps) => {
-  const {
-    removeFromCart,
-    incrementCartQuantity,
-    decrementCartQuantity,
-    cartQuantity,
-    cartProducts,
-  } = useShoppingCart();
+  const { incrementCartQuantity, decrementCartQuantity } = useShoppingCart();
 
   const product = ProductData.find((product) => product.id === id);
 

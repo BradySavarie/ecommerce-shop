@@ -1,6 +1,8 @@
 import { Drawer, Stack, Typography, Container } from '@mui/material';
 import { createContext, useContext, ReactNode, useState } from 'react';
 import { CartProduct } from '../components/CartProduct';
+import CloseIcon from '@mui/icons-material/Close';
+import ProductData from '../data/ProductData';
 
 type ShoppingCartContextProviderProps = {
   children: ReactNode;
@@ -20,6 +22,7 @@ type ShoppingCartContext = {
 type CartProduct = {
   id: string;
   quantity: number;
+  price: number;
 };
 
 const ShoppingCartContext = createContext({} as ShoppingCartContext);
@@ -38,6 +41,10 @@ export function ShoppingCartContextProvider({
     (quantity, product) => product.quantity + quantity,
     0
   );
+  const cartTotal = cartProducts.reduce(
+    (total, product) => product.price * product.quantity + total,
+    0
+  );
 
   const openCart = () => setIsOpen(true);
   const closeCart = () => setIsOpen(false);
@@ -46,12 +53,22 @@ export function ShoppingCartContextProvider({
   }
   function incrementCartQuantity(id: string) {
     return setCartProducts((currProducts) => {
-      if (currProducts.find((product) => product.id === id) == null) {
-        return [...currProducts, { id, quantity: 1 }];
+      const currProduct = ProductData.find((product) => product.id === id);
+      if (
+        currProducts.find((product) => product.id === id) == null &&
+        currProduct !== undefined
+      ) {
+        return [
+          ...currProducts,
+          { id, quantity: 1, price: currProduct?.price },
+        ];
       } else {
         return currProducts.map((product) => {
           if (product.id === id) {
-            return { ...product, quantity: product.quantity + 1 };
+            return {
+              ...product,
+              quantity: product.quantity + 1,
+            };
           } else {
             return product;
           }
@@ -101,19 +118,44 @@ export function ShoppingCartContextProvider({
             padding: (theme) => theme.spacing(2),
           }}
         >
-          <Typography
-            variant="h3"
-            fontWeight="500"
-            fontFamily="Lobster"
-            sx={{ mb: '30px' }}
+          <Container
+            sx={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'baseline',
+            }}
           >
-            Cart
-          </Typography>
-          <Stack spacing={2}>
+            <Typography
+              variant="h3"
+              fontWeight="500"
+              fontFamily="Lobster"
+              sx={{ mb: '30px' }}
+            >
+              Cart
+            </Typography>
+            <CloseIcon
+              sx={{
+                cursor: 'pointer',
+                '&:hover': {
+                  color: 'primary.main',
+                },
+              }}
+              onClick={closeCart}
+            />
+          </Container>
+          <Stack spacing={2} sx={{ mb: '30px' }}>
             {cartProducts.map((product) => (
               <CartProduct key={product.id} {...product} />
             ))}
           </Stack>
+          <Container sx={{ display: 'flex', justifyContent: 'space-between' }}>
+            <Typography variant="body1" fontWeight="600">
+              {cartQuantity} products
+            </Typography>
+            <Typography variant="body1" fontWeight="600">
+              Total: ${cartTotal}
+            </Typography>
+          </Container>
         </Container>
       </Drawer>
     </ShoppingCartContext.Provider>
