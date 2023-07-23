@@ -19,8 +19,13 @@ import { useShoppingCart } from '../context/ShoppingCartContextProvider';
 
 const Product = () => {
   const { products } = useContext(DataContext);
-  const { getProductQuantity, incrementCartQuantity, decrementCartQuantity } =
-    useShoppingCart();
+  const {
+    getProductQuantity,
+    incrementCartQuantity,
+    decrementCartQuantity,
+    openCart,
+    cartQuantity,
+  } = useShoppingCart();
   const { category, productId } = useParams();
 
   // Search & Filter Product Data
@@ -74,7 +79,16 @@ const Product = () => {
             </Container>
 
             <Container className="controls">
-              <Button size="small" color="primary" variant="outlined">
+              <Button
+                size="small"
+                color="primary"
+                variant="outlined"
+                onClick={() => {
+                  if (cartQuantity > 0) {
+                    openCart();
+                  }
+                }}
+              >
                 <ShoppingCartIcon />
               </Button>
               <Container className="quantity">

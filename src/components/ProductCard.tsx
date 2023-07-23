@@ -24,8 +24,12 @@ type ProductCardProps = {
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   const { category } = useParams();
-  const { getProductQuantity, incrementCartQuantity, decrementCartQuantity } =
-    useShoppingCart();
+  const {
+    getProductQuantity,
+    incrementCartQuantity,
+    decrementCartQuantity,
+    openCart,
+  } = useShoppingCart();
   const quantity = getProductQuantity(product.id);
 
   return (
@@ -48,7 +52,12 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         </Link>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary" variant="outlined">
+        <Button
+          size="small"
+          color="primary"
+          variant="outlined"
+          onClick={openCart}
+        >
           <ShoppingCartIcon />
         </Button>
         <Container
