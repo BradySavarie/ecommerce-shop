@@ -1,8 +1,9 @@
 import { useParams } from 'react-router-dom';
 import ProductData from '../data/ProductData';
 import ProductCard from '../components/ProductCard';
-import { Grid, Typography, Container } from '@mui/material';
+import { Grid, Typography, Container, Box } from '@mui/material';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import { ProductFilter } from '../components/ProductFilter';
 
 function Shop() {
   const { category } = useParams();
@@ -21,16 +22,22 @@ function Shop() {
           {category}
         </Typography>
       </Container>
-      <Container sx={{ mb: 4 }}>
+      <Container sx={{ mb: 4, display: 'flex' }}>
+        <ProductFilter />
         <Grid
           container
-          spacing={2}
-          sx={{ display: 'flex', justifyContent: 'center' }}
+          sx={{
+            justifyContent: 'center',
+            height: '68vh',
+            overflowY: 'auto',
+          }}
         >
           {products.map((product) => {
             return (
               <Grid item key={product.id}>
-                <ProductCard product={product} />
+                <Box p={1}>
+                  <ProductCard product={product} />
+                </Box>
               </Grid>
             );
           })}
