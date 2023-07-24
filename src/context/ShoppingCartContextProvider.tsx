@@ -1,7 +1,6 @@
-import { Drawer, Stack, Typography, Container } from '@mui/material';
 import { createContext, useContext, ReactNode, useState } from 'react';
 import { CartProduct } from '../components/CartProduct';
-import CloseIcon from '@mui/icons-material/Close';
+import { ShoppingCart } from '../components/ShoppingCart';
 import ProductData from '../data/ProductData';
 
 type ShoppingCartContextProviderProps = {
@@ -17,6 +16,8 @@ type ShoppingCartContext = {
   removeFromCart: (id: string) => void;
   cartQuantity: number;
   cartProducts: CartProduct[];
+  isOpen: boolean;
+  cartTotal: number;
 };
 
 type CartProduct = {
@@ -48,6 +49,7 @@ export function ShoppingCartContextProvider({
 
   const openCart = () => setIsOpen(true);
   const closeCart = () => setIsOpen(false);
+
   function getProductQuantity(id: string) {
     return cartProducts.find((item) => item.id === id)?.quantity || 0;
   }
@@ -108,56 +110,12 @@ export function ShoppingCartContextProvider({
         removeFromCart,
         cartQuantity,
         cartProducts,
+        cartTotal,
+        isOpen,
       }}
     >
       {children}
-      <Drawer anchor="right" open={isOpen} onClose={closeCart}>
-        <Container
-          sx={{
-            minWidth: '35vw',
-            padding: (theme) => theme.spacing(2),
-          }}
-        >
-          <Container
-            sx={{
-              display: 'flex',
-              justifyContent: 'space-between',
-              alignItems: 'baseline',
-            }}
-          >
-            <Typography
-              variant="h3"
-              fontWeight="500"
-              fontFamily="Lobster"
-              sx={{ mb: '30px' }}
-            >
-              Cart
-            </Typography>
-            <CloseIcon
-              sx={{
-                cursor: 'pointer',
-                '&:hover': {
-                  color: 'primary.main',
-                },
-              }}
-              onClick={closeCart}
-            />
-          </Container>
-          <Stack spacing={2} sx={{ mb: '30px' }}>
-            {cartProducts.map((product) => (
-              <CartProduct key={product.id} {...product} />
-            ))}
-          </Stack>
-          <Container sx={{ display: 'flex', justifyContent: 'space-between' }}>
-            <Typography variant="body1" fontWeight="600">
-              {cartQuantity} products
-            </Typography>
-            <Typography variant="body1" fontWeight="600">
-              Total: ${cartTotal}
-            </Typography>
-          </Container>
-        </Container>
-      </Drawer>
+      <ShoppingCart />
     </ShoppingCartContext.Provider>
   );
 }
