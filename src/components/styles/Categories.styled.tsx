@@ -9,11 +9,12 @@ export const StyledCategories = styled.div`
   box-shadow: ${({ theme }) => theme.shadows[1]};
 `;
 
-export const LinkContainer = styled('div')`
+export const LinkContainer = styled.div`
   margin: ${({ theme }) => theme.spacing(1)};
 `;
 
 export const StyledLink = styled(NavLink)`
+  margin-right: ${({ theme }) => theme.spacing(4)};
   text-decoration: none;
   color: ${({ theme }) => theme.palette.grey[800]};
 

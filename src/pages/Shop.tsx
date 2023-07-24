@@ -21,15 +21,21 @@ function Shop() {
           {category}
         </Typography>
       </Container>
-      <Grid container spacing={2}>
-        {products.map((product) => {
-          return (
-            <Grid item key={product.id}>
-              <ProductCard product={product} />
-            </Grid>
-          );
-        })}
-      </Grid>
+      <Container sx={{ mb: 4 }}>
+        <Grid
+          container
+          spacing={2}
+          sx={{ display: 'flex', justifyContent: 'center' }}
+        >
+          {products.map((product) => {
+            return (
+              <Grid item key={product.id}>
+                <ProductCard product={product} />
+              </Grid>
+            );
+          })}
+        </Grid>
+      </Container>
     </>
   );
 }

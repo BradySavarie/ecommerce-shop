@@ -7,6 +7,7 @@ import Product from './pages/Product';
 import NotFound from './pages/NotFound';
 import StyledApp from './components/styles/App.styled';
 import { ShoppingCartContextProvider } from './context/ShoppingCartContextProvider';
+import { DataContextProvider } from './context/DataContextProvider.tsx';
 
 const theme = createTheme({
   typography: {
@@ -26,15 +27,20 @@ export function App() {
   return (
     <ThemeProvider theme={theme}>
       <ShoppingCartContextProvider>
-        <StyledApp>
-          <NavBar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/catalog/:category" element={<Shop />} />
-            <Route path="/catalog/:category/:productId" element={<Product />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </StyledApp>
+        <DataContextProvider>
+          <StyledApp>
+            <NavBar />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/catalog/:category" element={<Shop />} />
+              <Route
+                path="/catalog/:category/:productId"
+                element={<Product />}
+              />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </StyledApp>
+        </DataContextProvider>
       </ShoppingCartContextProvider>
     </ThemeProvider>
   );

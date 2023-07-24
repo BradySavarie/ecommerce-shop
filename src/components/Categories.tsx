@@ -21,7 +21,13 @@ const Categories = () => {
       <StyledCategories>
         <Container>
           <Divider />
-          <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
+          <Box
+            sx={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              overflowX: 'auto',
+            }}
+          >
             {categories.map((category) => (
               <LinkContainer key={category}>
                 <StyledLink to={`/catalog/${category}`}>{category}</StyledLink>

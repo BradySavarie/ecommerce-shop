@@ -6,6 +6,11 @@ import rat2__proco from '../assets/rat2__proco.webp';
 import bigMuff__electroHarmonix from '../assets/big-muff__electro-harmonix.webp';
 import dd3__boss from '../assets/dd3__boss.webp';
 import afterneath__earthquakerDevices from '../assets/afterneath__earthquaker-devices.jpeg';
+import sd1__boss from '../assets/sd1__boss.webp';
+import soulFood__electroHarmonix from '../assets/soul-food__electro-harmonix.webp';
+import fuzzBender__keeley from '../assets/fuzz-bender__keeley.webp';
+import mood__chaseBliss from '../assets/mood__chase-bliss.webp';
+import aurora__keeley from '../assets/aurora__keeley.webp';
 
 export type Product = {
   id: string;
@@ -40,13 +45,23 @@ const ProductData: Product[] = [
   },
   {
     id: uniqid(),
-    model: 'BD-2 Blues Driver',
+    model: 'BD-2',
     image: bd2__boss,
     manufacturer: 'Boss',
     category: 'Overdrive',
     description:
       "The BOSS BD-2 Blues Driver guitar effects pedal delivers that creamy yet crunchy sound you've heard countless great blues guitar players call up - and at a great value! The BD-2 Blues Driver simulates the sound of a vintage tube amplifier, giving you instant access to timeless tones. It also responds to your playing dynamics, so you can pull out a range of tones to give each note the perfect flavor and feel. All in all, you'll love the warm overdrive and emotive distortion the BOSS BD-2 Blues Driver adds to your rig.",
     price: 159,
+  },
+  {
+    id: uniqid(),
+    model: 'SD-1',
+    image: sd1__boss,
+    manufacturer: 'Boss',
+    category: 'Overdrive',
+    description:
+      "The SD-1 Super OverDrive pedal produces the warm, natural distortion of an overdriven tube amplifier while maintaining the subtle nuances of a player's picking technique. This is one of BOSS' more subtle and smooth overdrive pedals, perfect for blues and rock.",
+    price: 86,
   },
   {
     id: uniqid(),
@@ -60,6 +75,16 @@ const ProductData: Product[] = [
   },
   {
     id: uniqid(),
+    model: 'Soul Food',
+    image: soulFood__electroHarmonix,
+    manufacturer: 'Electro-Harmonix',
+    category: 'Distortion',
+    description:
+      "Transparent overdrive with great touch and response! Tone aficionados kept telling Mike Matthews about a pedal that had achieved a lot of buzz because it was only obtainable at an exorbitant price. That pedal was the Klon Cantaur. A believer in bringing great tools to starving musicians, Mike tasked his trusty team to create an affordable alternative, and that is how the EHX Soul Food Transparent Overdrive was cooked up. Its circuitry features boosted power rails to provide abundant headroom and increased definition. Best of all, you don't have to be a rock star to own one!",
+    price: 125,
+  },
+  {
+    id: uniqid(),
     model: 'Big Muff',
     image: bigMuff__electroHarmonix,
     manufacturer: 'Electro-Harmonix',
@@ -70,13 +95,33 @@ const ProductData: Product[] = [
   },
   {
     id: uniqid(),
-    model: 'DD3',
+    model: 'Fuzz Bender',
+    image: fuzzBender__keeley,
+    manufacturer: 'Keeley',
+    category: 'Fuzz',
+    description:
+      'The Keeley Fuzz Bender is a modern fuzz using a combination of high-gain silicon and silky smooth germanium transistors. What makes this fuzz better? An Active EQ! Using two gyrators as an active EQ gives you the ability to create massive fuzz tones not possible with typical square-wave boxes.Pummel your amp with over 20dB of boost/cut at 100Hz and 10K Hz! The Fuzz Bender is built around vintage Japanese germanium to create its monumental fuzz tones. With the all new Bias Control, you control the attack and decay of your notes. Anything from Fat Square Waves to Angular Fuzz to glitchy-Velcro attacks are possible with the Bias Control.',
+    price: 219,
+  },
+  {
+    id: uniqid(),
+    model: 'DD-3',
     image: dd3__boss,
     manufacturer: 'Boss',
     category: 'Delay',
     description:
       "Since its launch in 1986, the Boss DD-3 has remained the go-to digital delay for players - both bedroom and pro - looking for something reliable, easy to use and familiar. If you're looking to go digital, there's no better place to start.",
     price: 139,
+  },
+  {
+    id: uniqid(),
+    model: 'Mood',
+    image: mood__chaseBliss,
+    manufacturer: 'Chase Bliss',
+    category: 'Delay',
+    description:
+      'The Mood is the result of a collaboration between Chase Bliss, Old Blood Noise Endeavors, and the Belgium-based Drolo. Its two channels of delays and looping options allow you to stretch, twist, freeze, and otherwise manipulate your audio in myriad ways.',
+    price: 400,
   },
   {
     id: uniqid(),
@@ -87,6 +132,16 @@ const ProductData: Product[] = [
     description:
       "The Afterneath sounds a lot like it looks - a wizard in a cave in a box. You are the wizard - or sorceress, if you prefer - and the cave is your instrument's signal, vast, expansive, and magical. It is true-bypass, and built one-at-a-time by a wizard, two bards, a paladin, a monk, a handful of rangers, a couple druids, a barbarian, a rogue, and a Dungeon Master in the Gelatinous Cube of Akron, Ohio, USA. The Afterneath uses silent relay-based soft touch switching. Audio will not pass without power.",
     price: 259,
+  },
+  {
+    id: uniqid(),
+    model: 'Aurora',
+    image: aurora__keeley,
+    manufacturer: 'Keeley',
+    category: 'Reverb',
+    description:
+      "Join Keeley Electronics' grand entrance into the hallowed halls of psycho-acoustic processing - the Aurora Reverb. Few effects complement a guitar better than reverb; from spring reverb coils in a tank to the distant echo of cathedrals to 600 pound sheet-metal plate vibrations. Reverb captures our imaginations and plunges us deeply into our musical psyches.  Reverb IS the key to the highway. At Keeley Electronics, the Aurora Reverb had to meet certain specific criteria. It had to be affordable with no compromise to audio quality. It had to be easy for guitarists to use and be inspiring. And it had to offer the essentials for tailoring your tone without a dozen knobs to learn. Now achieved, we are proud to offer a true bypass, 100% dry analog path, low noise, 24 bit, high-fidelity reverb processor. AND IT SOUNDS GREAT!",
+    price: 269,
   },
 ];
 

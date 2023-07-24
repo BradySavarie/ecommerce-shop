@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Card, CardMedia } from '@mui/material';
 
 interface StyledCardMediaProps {
-  component: string; // Add the 'component' prop to the interface
+  component: string;
   image: string;
   alt: string;
 }
@@ -15,6 +15,11 @@ export const StyledProductCard = styled(Card)`
   a {
     text-decoration: none;
     color: ${({ theme }) => theme.palette.grey[900]};
+  }
+
+  @media screen and (max-width: ${({ theme }) =>
+      theme.breakpoints.values.sm}px) {
+    width: 75vw;
   }
 `;
 

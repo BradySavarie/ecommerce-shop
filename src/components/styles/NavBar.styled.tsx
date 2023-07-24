@@ -13,6 +13,7 @@ const StyledNavBar = styled.div`
 
   .logo,
   .shopLink {
+    white-space: nowrap;
     text-decoration: none;
     color: ${({ theme }) => theme.palette.grey[900]};
   }

@@ -15,7 +15,7 @@ const StyledSearchBar = styled.div`
     font-size: 15px;
     padding: 15px;
     height: 30px;
-    width: 45vw;
+    width: 40vw;
     box-shadow: ${({ theme }) => theme.shadows[1]};
     margin-left: ${({ theme }) => theme.spacing(2)};
   }
@@ -31,6 +31,13 @@ const StyledSearchBar = styled.div`
       0 4px 6px -1px rgb(0 0 0 / 0.1),
       0 2px 4px -2px rgb(0 0 0 / 0.1);
     margin-right: ${({ theme }) => theme.spacing(2)};
+  }
+
+  .searchInput,
+  .searchIcon {
+    @media (max-width: ${({ theme }) => theme.breakpoints.values.sm}px) {
+      display: none;
+    }
   }
 
   .searchInput:focus {

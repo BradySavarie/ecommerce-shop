@@ -21,10 +21,10 @@ function Home() {
             color="grey[900]"
             fontWeight="600"
             fontFamily="Source Sans 3"
-            sx={{ mb: 2 }}
+            sx={{ mb: 2, whiteSpace: 'nowrap' }}
           >
-            Unleash your creativity and elevate your sound with our collection
-            of audio effects equipment
+            Unleash your creativity and elevate your sound with <br />
+            our collection of audio effects equipment
           </Typography>
           <Link to="/catalog/All">
             <Button variant="contained">View Catalog</Button>
