@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 const StyledNavBar = styled.div`
-  position: relative;
   display: flex;
   padding: ${({ theme }) => {
     const { spacing } = theme;

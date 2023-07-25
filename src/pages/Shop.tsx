@@ -28,8 +28,6 @@ function Shop() {
           container
           sx={{
             justifyContent: 'center',
-            height: '68vh',
-            overflowY: 'auto',
           }}
         >
           {products.map((product) => {
