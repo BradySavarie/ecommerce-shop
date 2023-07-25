@@ -11,6 +11,9 @@ import soulFood__electroHarmonix from '../assets/soul-food__electro-harmonix.web
 import fuzzBender__keeley from '../assets/fuzz-bender__keeley.webp';
 import mood__chaseBliss from '../assets/mood__chase-bliss.webp';
 import aurora__keeley from '../assets/aurora__keeley.webp';
+import germaniumBoost__jhs from '../assets/germanium-boost__jhs.webp';
+import plumes__earthquakerDevices from '../assets/plumes__earthquaker-devices.jpeg';
+import distortionplus__mxr from '../assets/distortion+__mxr.webp';
 
 export type Product = {
   id: string;
@@ -45,6 +48,16 @@ const ProductData: Product[] = [
   },
   {
     id: uniqid(),
+    model: 'Germanium Boost',
+    image: germaniumBoost__jhs,
+    manufacturer: 'JHS',
+    category: 'Boost',
+    description:
+      "The JHS team has taken the sound of the amp-top Dallas Rangemaster treble booster and put it in boost pedal form - adding some modern features to sweeten the deal. Born out of the 1960s, the Dallas Rangemaster became an iconic boost effect (the world's first dedicated guitar booster) and can be heard all over guitar tracks from Brian May, Rory Gallagher, Tony Iommi, and more. The JHS Germanium Boost is a recreation of the iconic amp-top boost box but offers a bypass footswitch so you can put it on your pedalboard and a two-way toggle switch that changes the voicing of the boost between the classic Rangemaster sound or a thicker, more modern tone.",
+    price: 650,
+  },
+  {
+    id: uniqid(),
     model: 'BD-2',
     image: bd2__boss,
     manufacturer: 'Boss',
@@ -65,6 +78,16 @@ const ProductData: Product[] = [
   },
   {
     id: uniqid(),
+    model: 'Plumes',
+    image: plumes__earthquakerDevices,
+    manufacturer: 'Earthquaker Devices',
+    category: 'Overdrive',
+    description:
+      "Though modeled off of Ibanez's classic Tube Screamer, the EQD Plumes is not merely a clone. Instead of using an IC op-amp in the circuit, EQD replaces it with what it calls a 'low-noise JFET op-amp for a more robust and precise signal, with a significantly lower noise floor.' So whether you crank it or use the pedal at more modest gain levels, you'll keep extraneous noise to a minimum. A 3-way toggle lets you choose between clipping options for either a more compressed or more transparent sound. While the Tone knob lets you add bass or high-end without losing mids.",
+    price: 139,
+  },
+  {
+    id: uniqid(),
     model: 'RAT 2',
     image: rat2__proco,
     manufacturer: 'ProCo',
@@ -82,6 +105,16 @@ const ProductData: Product[] = [
     description:
       "Transparent overdrive with great touch and response! Tone aficionados kept telling Mike Matthews about a pedal that had achieved a lot of buzz because it was only obtainable at an exorbitant price. That pedal was the Klon Cantaur. A believer in bringing great tools to starving musicians, Mike tasked his trusty team to create an affordable alternative, and that is how the EHX Soul Food Transparent Overdrive was cooked up. Its circuitry features boosted power rails to provide abundant headroom and increased definition. Best of all, you don't have to be a rock star to own one!",
     price: 125,
+  },
+  {
+    id: uniqid(),
+    model: 'Distortion+',
+    image: distortionplus__mxr,
+    manufacturer: 'MXR',
+    category: 'Distortion',
+    description:
+      "This little yellow box is responsible for those great distortion sounds heard on so many classic recordings. Set the Distortion control low and crank the Output knob to drive the front end of your amp for cool blues tones, or max out the Distortion knob for classic early '80s hard rock tone. There still isn't any distortion unit on the market that sounds like the Distortion+.",
+    price: 116,
   },
   {
     id: uniqid(),

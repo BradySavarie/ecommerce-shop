@@ -47,7 +47,7 @@ export function ShoppingCart() {
         </Stack>
         <Container sx={{ display: 'flex', justifyContent: 'space-between' }}>
           <Typography variant="body1" fontWeight="600">
-            {cartQuantity} products
+            {cartQuantity} Products
           </Typography>
           <Typography variant="body1" fontWeight="600">
             Total: ${cartTotal}
