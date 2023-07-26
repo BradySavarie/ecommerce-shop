@@ -16,16 +16,11 @@ export default defineConfig({
       ),
     },
   },
-  base: '/ecommerce-shop/',
+  base: '/',
   plugins: [react()],
   test: {
     globals: true,
     environment: 'jsdom',
     setupFiles: ['./src/setupTests.ts'],
-  },
-  build: {
-    commonjsOptions: {
-      transformMixedEsModules: true,
-    },
   },
 });
