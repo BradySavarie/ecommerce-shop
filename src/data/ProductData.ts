@@ -14,6 +14,9 @@ import aurora__keeley from '../assets/aurora__keeley.webp';
 import germaniumBoost__jhs from '../assets/germanium-boost__jhs.webp';
 import plumes__earthquakerDevices from '../assets/plumes__earthquaker-devices.jpeg';
 import distortionplus__mxr from '../assets/distortion+__mxr.webp';
+import hizumitas__earthquakerDevices from '../assets/hizumitas__earthquaker-devices.webp';
+import timeline__strymon from '../assets/timeline__strymon.webp';
+import blackhole__eventide from '../assets/blackhole__eventide.jpeg';
 
 export type Product = {
   id: string;
@@ -138,6 +141,16 @@ const ProductData: Product[] = [
   },
   {
     id: uniqid(),
+    model: 'Hizumitas',
+    image: hizumitas__earthquakerDevices,
+    manufacturer: 'Earthquaker Devices',
+    category: 'Fuzz',
+    description:
+      "A collaboration with Japanese doom legends Boris, the Hizumitas is a recreation of guitarist Wata's favorite Elk Sustainer fuzz. The Big Muff-style circuit is raw and rowdy, with enough gain and distortion to make the earth shake. As much heavy distortion and massive bass response as you desire, with the type of purring sustain you could expect from '70s V1 Triangle Big Muffs.",
+    price: 199,
+  },
+  {
+    id: uniqid(),
     model: 'DD-3',
     image: dd3__boss,
     manufacturer: 'Boss',
@@ -145,6 +158,16 @@ const ProductData: Product[] = [
     description:
       "Since its launch in 1986, the Boss DD-3 has remained the go-to digital delay for players - both bedroom and pro - looking for something reliable, easy to use and familiar. If you're looking to go digital, there's no better place to start.",
     price: 139,
+  },
+  {
+    id: uniqid(),
+    model: 'Timeline',
+    image: timeline__strymon,
+    manufacturer: 'Strymon',
+    category: 'Delay',
+    description:
+      "The Strymon Timeline Delay pedal is more of a workstation than a traditional pedal, providing the sort of granular control and processing power that's more commonly found in studios than on home pedalboards. Normally sold only direct from Strymon brand new, mint used specimens pop up frequently and sell quickly. Grab a Strymon Timeline while you can and check back to see the latest deals.",
+    price: 615,
   },
   {
     id: uniqid(),
@@ -175,6 +198,16 @@ const ProductData: Product[] = [
     description:
       "Join Keeley Electronics' grand entrance into the hallowed halls of psycho-acoustic processing - the Aurora Reverb. Few effects complement a guitar better than reverb; from spring reverb coils in a tank to the distant echo of cathedrals to 600 pound sheet-metal plate vibrations. Reverb captures our imaginations and plunges us deeply into our musical psyches.  Reverb IS the key to the highway. At Keeley Electronics, the Aurora Reverb had to meet certain specific criteria. It had to be affordable with no compromise to audio quality. It had to be easy for guitarists to use and be inspiring. And it had to offer the essentials for tailoring your tone without a dozen knobs to learn. Now achieved, we are proud to offer a true bypass, 100% dry analog path, low noise, 24 bit, high-fidelity reverb processor. AND IT SOUNDS GREAT!",
     price: 269,
+  },
+  {
+    id: uniqid(),
+    model: 'Blackhole',
+    image: blackhole__eventide,
+    manufacturer: 'Eventide',
+    category: 'Reverb',
+    description:
+      "Once hidden in rackmount units or multi-effects, Eventide's classic Blackhole reverb is available here in an easy-to-use stompbox—though the uses for it remain limitless. From short echoes to infinite reverberations, the Blackhole pedal can add a huge amount of space around any instrument, thanks to the pedal's mono/stereo settings and guitar/line-level input options.",
+    price: 329,
   },
 ];
 
