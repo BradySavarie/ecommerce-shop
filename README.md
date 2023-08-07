@@ -2,11 +2,11 @@
 
 <h2>An E-Commerce Shop For Guitarists</h2>
 
-// insert image here
+<img width="966" alt="E-Commerce Shop Home Page" src="https://github.com/BradySavarie/ecommerce-shop/assets/106128212/1ac19ab5-0868-4b3f-9141-1695190d0f4c">
 
 <em>This application enables users to create a professional resume that seamlessly integrates with applicant tracking systems (ATS), eliminating the need for manual data correction and retyping. Users can easily switch between edit and preview modes to visualize the automated formatting of their resume as they write. By clicking the Create Sample button, users can view a completed resume example, and the reset option clears all fields. Once completed, the resume can be downloaded as a PDF.</em>
 
-Live Link: [bradysavarie.github.io/cv-builder/](https://bradysavarie.github.io/cv-builder/)
+Live Link: [bradysavarie.github.io/cv-builder/](https://bradysavarie.github.io/cv-builder/)](https://beamish-bienenstitch-2cbea9.netlify.app)
 
 <hr>
 
