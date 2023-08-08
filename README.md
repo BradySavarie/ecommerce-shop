@@ -4,7 +4,7 @@
 
 <img width="966" alt="E-Commerce Shop Home Page" src="https://github.com/BradySavarie/ecommerce-shop/assets/106128212/1ac19ab5-0868-4b3f-9141-1695190d0f4c">
 
-<em>Audio Effects is an ecommerce application offering a hand-selected catalog of guitar effects pedals. Visit the shop page to view all of the available pedals, or click on a category in the navigation bar to narrow down your search. While browsing through the shop you can also filter the effects catalog by brand. If you already know which effect you are looking for you can type it's name in the search bar and select it from the drop down list. Click on any product to view more details, or add/remove it from the cart by adjusting the product quantity using the arrow buttons. The shopping cart can be accessed by clicking the cart icon available on each product and in the top right hand corner of the naviation bar. </em>
+<em>Audio Effects is an ecommerce application offering a hand-selected catalog of guitar effects pedals. Visit the shop page to view all of the available pedals, or click on a category in the navigation bar to narrow down your search. While browsing through the shop you can also filter the effects catalog by brand. If you already know which effect you are looking for you can type it's name in the search bar and select it from the drop down list. Click on any product to view more details, or add/remove it from the cart by adjusting the product quantity using the up and down arrow buttons. The shopping cart can be accessed by clicking the cart icon available on each product and in the top right hand corner of the navigation bar. </em>
 
 Live Link: https://beamish-bienenstitch-2cbea9.netlify.app
 
