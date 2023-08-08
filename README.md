@@ -1,6 +1,6 @@
 <h1>🎸 Audio Effects</h1>
 
-<h2>An E-Commerce Shop For Guitarists</h2>
+<h2>An E-Commerce Shop For Musicians</h2>
 
 <img width="966" alt="E-Commerce Shop Home Page" src="https://github.com/BradySavarie/ecommerce-shop/assets/106128212/1ac19ab5-0868-4b3f-9141-1695190d0f4c">
 
